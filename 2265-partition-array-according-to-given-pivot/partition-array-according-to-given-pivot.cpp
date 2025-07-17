@@ -1,9 +1,7 @@
 class Solution {
 public:
     vector<int> pivotArray(vector<int>& nums, int pivot) {
-        vector<int> less;
-        vector<int> equal;
-        vector<int> great;
+        vector<int> less,equal,great;
         for(int n:nums){
             if(n<pivot){
                 less.push_back(n);
