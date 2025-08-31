@@ -1,6 +1,9 @@
 class Solution {
 public:
     int getWinner(vector<int>& arr, int k) {
+         if(k==1){
+            return max(arr[0],arr[1]);
+        }
         if(k>arr.size()){
             sort(arr.begin(),arr.end());
             return arr[arr.size()-1];
