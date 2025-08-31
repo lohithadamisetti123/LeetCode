@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int getWinner(vector<int>& arr, int k) {
+        if(k>arr.size()){
+            sort(arr.begin(),arr.end());
+            return arr[arr.size()-1];
+        }
+        int c=0,maxx=arr[0];
+        for(int i=1;i<arr.size();i++){
+           if(maxx>arr[i]){
+            c++;
+           }
+           else{
+            maxx=arr[i];
+            c=1;
+           }
+           if(c==k) return maxx;
+        }
+        return maxx;
+    }
+};
