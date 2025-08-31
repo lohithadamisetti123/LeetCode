@@ -5,8 +5,7 @@ public:
             return max(arr[0],arr[1]);
         }
         if(k>arr.size()){
-            sort(arr.begin(),arr.end());
-            return arr[arr.size()-1];
+            return *max_element(arr.begin(), arr.end());
         }
         int c=0,maxx=arr[0];
         for(int i=1;i<arr.size();i++){
