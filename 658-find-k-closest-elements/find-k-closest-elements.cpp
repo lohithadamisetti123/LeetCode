@@ -10,10 +10,7 @@ public:
                res.erase(res.begin());
                res.push_back(arr[i]);
            }
-           else if(abs(res.front()-x)==abs(arr[i]-x)&& res.front() > arr[i]){
-               res.erase(res.begin());
-               res.push_back(arr[i]);
-           }
+          
        }
        return res;
     }
